@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dawson | Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dawson | Electrical Engineering Portfolio</title>
+<meta name="description" content="Electrical engineering student at Rutgers focused on power systems and space hardware.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Spectral:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f6f8f7;
+    --ink: #16212b;
+    --muted: #5b6b76;
+    --line: #d3dcdf;
+    --accent: #0e5a60;
+    --placeholder: #e6ecee;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 17px/1.6 "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 72px 24px 96px; }
+  h1, h2, h3 { font-family: "Spectral", Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.2; margin: 0; }
+  h1 { font-size: clamp(2.6rem, 8vw, 4rem); letter-spacing: -0.01em; }
+  h2 { font-size: 1.5rem; margin-bottom: 8px; }
+  h3 { font-size: 1.35rem; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .lede { font-size: 1.2rem; max-width: 34em; margin: 20px 0 24px; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0; padding: 0; list-style: none; font-weight: 500; }
+
+  section { margin-top: 72px; }
+  .section-note { color: var(--muted); margin: 0 0 8px; }
+
+  .project { border-top: 1px solid var(--line); padding: 32px 0 40px; }
+  .project:last-of-type { border-bottom: 1px solid var(--line); }
+  .shot {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    background: var(--placeholder);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 0.95rem; text-align: center; padding: 16px;
+    object-fit: cover;
+  }
+  .project p { margin: 10px 0 0; }
+  .tools { color: var(--muted); font-size: 0.95rem; }
+  .status { color: var(--accent); font-weight: 500; font-size: 0.95rem; }
+  .result { font-weight: 500; }
+
+  .more { margin: 0; padding: 0; list-style: none; }
+  .more li { padding: 14px 0; border-top: 1px solid var(--line); }
+  .more li:last-child { border-bottom: 1px solid var(--line); }
+  .more span { color: var(--muted); }
+
+  footer { margin-top: 72px; }
+  footer p { margin: 8px 0; }
+</style>
 </head>
 <body>
-  <h1>Dawson</h1>
-  <p>Electrical Engineering student at Rutgers. Portfolio coming soon.</p>
+<main>
+
+  <header>
+    <h1>Dawson</h1>
+    <p class="lede">Electrical engineering student at Rutgers University, focused on power systems and space hardware. I design converters, circuit boards, and system models.</p>
+    <ul class="links">
+      <li><a href="resume.pdf">Resume (PDF)</a></li>
+      <li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN/">LinkedIn</a></li>
+      <li><a href="mailto:YOUR-EMAIL@example.com">Email</a></li>
+    </ul>
+  </header>
+
+  <section id="projects">
+    <h2>Selected projects</h2>
+    <p class="section-note">Click a project for schematics, simulations, and files.</p>
+
+    <!-- To add a real image: replace the <div class="shot">...</div> line with
+         <img class="shot" src="images/your-file.png" alt="Describe the image"> -->
+
+    <article class="project">
+      <div class="shot">Add an image: system diagram or simulation result</div>
+      <h3>Hybrid microgrid for an Antarctic research station</h3>
+      <p>[One or two sentences: what the station needed and what you designed, such as generation sources, storage, and how loads are served.]</p>
+      <p class="result">Result: [one concrete outcome, such as a simulated load profile met or a sizing decision.]</p>
+      <p class="tools">PowerWorld Simulator, Simulink, AutoCAD</p>
+      <p><a href="#">Project details</a></p>
+    </article>
+
+    <article class="project">
+      <div class="shot">Add an image: converter schematic or simulation waveform</div>
+      <h3>DC-DC converter for a CubeSat power system</h3>
+      <p>[One or two sentences: the input and output requirements and the topology you chose.]</p>
+      <p class="result">Result: [one concrete outcome, such as efficiency, ripple, or a simulated response.]</p>
+      <p class="tools">Altium, MATLAB, LTspice</p>
+      <p><a href="#">Project details</a></p>
+    </article>
+
+    <article class="project">
+      <div class="shot">Add an image: PCB layout or 3D render</div>
+      <h3>BMI088 breakout board</h3>
+      <p>[One or two sentences: what the board does and the design decisions you made.]</p>
+      <p class="tools">Altium, LTspice</p>
+      <p><a href="#">Project details</a></p>
+    </article>
+
+    <article class="project">
+      <div class="shot">Add an image: schematic or breadboard photo</div>
+      <h3>Solar MPPT power bank</h3>
+      <p class="status">In progress</p>
+      <p>[One or two sentences: a battery pack with a solar charge controller, and where you are in the design.]</p>
+      <p class="tools">Altium, Arduino, BQ-series charge controller</p>
+      <p><a href="#">Project details</a></p>
+    </article>
+  </section>
+
+  <section id="more">
+    <h2>More work</h2>
+    <ul class="more">
+      <li>Three-way passive crossover network <span>(LTspice, MATLAB)</span></li>
+      <li>Vertical jump tester with contact mat <span>(Arduino Uno)</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <h2>Contact</h2>
+    <p><a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a></p>
+    <p>Long Island, New York</p>
+  </footer>
+
+</main>
 </body>
 </html>
